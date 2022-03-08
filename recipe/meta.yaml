@@ -1,4 +1,4 @@
-{% set version = '4.3.3' %}
+{% set version = "4.3.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MatchIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MatchIt/MatchIt_{{ version }}.tar.gz
-  sha256: 7d7e903a2beeb6891d0de4e3f0209392d76cbaa60af8697592a8f1cde2770cbf
+  sha256: a645a80ed2daf8b90f55bfb055d97941fa5c47fe7212595ea6d89430ffd94d14
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -51,16 +51,12 @@ test:
 about:
   home: https://kosukeimai.github.io/MatchIt/, https://github.com/kosukeimai/MatchIt
   license: GPL-2.0-or-later
-  summary: Selects matched samples of the original treated and control groups with similar covariate
-    distributions -- can be used to match exactly on covariates, to match on propensity
-    scores, or perform a variety of other matching procedures.  The package also implements
-    a series of recommendations offered in Ho, Imai, King, and Stuart (2007) <DOI:10.1093/pan/mpl013>.
-    (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation
-    of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
+  summary: Selects matched samples of the original treated and control groups with similar covariate distributions -- can be used to match exactly on covariates, to match on propensity scores, or perform a variety of other matching procedures.  The package also implements a series of recommendations offered in Ho, Imai,
+    King, and Stuart (2007) <DOI:10.1093/pan/mpl013>. (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
