@@ -1,11 +1,22 @@
+About r-matchit-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-matchit-feedstock/blob/main/LICENSE.txt)
+
 About r-matchit
-===============
+---------------
 
 Home: https://kosukeimai.github.io/MatchIt/, https://github.com/kosukeimai/MatchIt
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-matchit-feedstock/blob/main/LICENSE.txt)
+Summary: Selects matched samples of the original treated and control groups with similar covariate distributions -- can be used to match exactly on covariates, to match on propensity scores, or perform a variety of other matching procedures.  The package also implements a series of recommendations offered in Ho, Imai, King, and Stuart (2007) <DOI:10.1093/pan/mpl013>. (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
+About r-matchit
+---------------
+
+Home: https://kosukeimai.github.io/MatchIt/, https://github.com/kosukeimai/MatchIt
+
+Package license: GPL-2.0-or-later
 
 Summary: Selects matched samples of the original treated and control groups with similar covariate distributions -- can be used to match exactly on covariates, to match on propensity scores, or perform a variety of other matching procedures.  The package also implements a series of recommendations offered in Ho, Imai, King, and Stuart (2007) <DOI:10.1093/pan/mpl013>. (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
 
