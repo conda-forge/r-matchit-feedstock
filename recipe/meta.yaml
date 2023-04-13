@@ -1,4 +1,4 @@
-{% set version = "4.5.2" %}
+{% set version = "4.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MatchIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MatchIt/MatchIt_{{ version }}.tar.gz
-  sha256: ef6e3084cbc66e570147e6e34b33047a1349b7f20a2d8c4cfa732516cb2df30a
+  sha256: 35625894bc8360b6b2b6f77046f6c764c52d049a1a0ed93076711b464271ca1a
 
 build:
   merge_build_host: true  # [win]
