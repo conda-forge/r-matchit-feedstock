@@ -1,4 +1,4 @@
-{% set version = "4.5.5" %}
+{% set version = "4.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MatchIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MatchIt/MatchIt_{{ version }}.tar.gz
-  sha256: ae39cafdd3a52487e3ebff1b49642f516cf64321fea90fa57ce3d545a259859e
+  sha256: 7a77c76db4b2f60aae1dcfeb805485c2355efc31f0cb128f8e5e1a8185aea815
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
