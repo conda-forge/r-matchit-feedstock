@@ -31,12 +31,14 @@ requirements:
     - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ compiler('fortran') }}    # [osx]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - libstdcxx !=14.3.0,!=15.1.0           # [win]
   host:
     - r-base
     - r-rcpp >=1.0.10
@@ -51,6 +53,8 @@ requirements:
     - r-backports >=1.1.9
     - r-chk >=0.8.1
     - r-rlang >=1.1.0
+  run_constrained:
+    - libstdcxx !=14.3.0,!=15.1.0           # [win]
 
 test:
   commands:
