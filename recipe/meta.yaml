@@ -33,17 +33,17 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-rcpp >=1.0.10
+    - r-rcpp
     - r-rcppprogress
     - r-backports >=1.1.9
-    - r-chk >=0.8.1
+    - r-chk >=0.10.0
     - r-rlang >=1.1.0
   run:
     - r-base
-    - r-rcpp >=1.0.10
+    - r-rcpp
     - r-rcppprogress
     - r-backports >=1.1.9
-    - r-chk >=0.8.1
+    - r-chk >=0.10.0
     - r-rlang >=1.1.0
 
 test:
