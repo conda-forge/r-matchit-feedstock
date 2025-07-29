@@ -1,4 +1,4 @@
-{% set version = "4.7.1" %}
+{% set version = "4.7.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,13 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MatchIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MatchIt/MatchIt_{{ version }}.tar.gz
-  sha256: 57b86ff34211c279a4b22cf09d0a1160bc12f05c8bb471279cd07562bfcb9989
+  sha256: f1b5ea251d1095c40afbd3c7d6af2922e2fd3c76885dfd4441459c4a158178ad
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -38,24 +42,20 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
   host:
     - r-base
-    - r-rcpp >=1.0.10
+    - r-rcpp
     - r-rcppprogress
     - r-backports >=1.1.9
-    - r-chk >=0.8.1
+    - r-chk >=0.10.0
     - r-rlang >=1.1.0
   run:
     - r-base
-    - r-rcpp >=1.0.10
+    - r-rcpp
     - r-rcppprogress
     - r-backports >=1.1.9
-    - r-chk >=0.8.1
+    - r-chk >=0.10.0
     - r-rlang >=1.1.0
-  run_constrained:
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
-
 test:
   commands:
     - $R -e "library('MatchIt')"           # [not win]
