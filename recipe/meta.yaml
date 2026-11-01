@@ -1,4 +1,4 @@
-{% set version = "4.7.2" %}
+{% set version = "4.8.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/MatchIt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/MatchIt/MatchIt_{{ version }}.tar.gz
-  sha256: f1b5ea251d1095c40afbd3c7d6af2922e2fd3c76885dfd4441459c4a158178ad
+  sha256: 7e23548ed4c1250a2965b0b44e18d2e2c9885c3884778b0b7b936e8107da6c8a
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -64,8 +64,8 @@ test:
 about:
   home: https://kosukeimai.github.io/MatchIt/, https://github.com/kosukeimai/MatchIt
   license: GPL-2.0-or-later
-  summary: Selects matched samples of the original treated and control groups with similar covariate distributions -- can be used to match exactly on covariates, to match on propensity scores, or perform a variety of other matching procedures.  The package also implements a series of recommendations offered in Ho, Imai,
-    King, and Stuart (2007) <DOI:10.1093/pan/mpl013>. (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
+  summary: Selects matched samples of the original treated and control groups with similar covariate distributions -- can be used to match exactly on covariates, to match on propensity scores, or perform a variety of other matching procedures.  The package also implements a series of recommendations offered in Ho, 
+    Imai, King, and Stuart (2007) <DOI:10.1093/pan/mpl013>. (The 'gurobi' package, which is not on CRAN, is optional and comes with an installation of the Gurobi Optimizer, available at <https://www.gurobi.com>.)
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
